@@ -208,6 +208,7 @@ void CNewPlayer::Loop() {
 	Players.GetAvatarTexture(avatar->GetValue())->DrawFrame(
 	    prevleft, prevtop, prevwidth, prevwidth, 2, col);
 
+	textfield->focus = true;
 	DrawGUI();
 	Winsys.SwapBuffers();
 }

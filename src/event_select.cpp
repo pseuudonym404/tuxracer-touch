@@ -149,14 +149,12 @@ void CEventSelect::Loop () {
 
 	FT.AutoSizeN (4);
 
-	if (event->focussed()) col = colDYell;
-	else col = colWhite;
+	col = colWhite;
 	DrawFrameX (area.left, frametop1, framewidth, frameheight, 3, colMBackgr, col, 1.0);
 	FT.SetColor (colDYell);
 	FT.DrawString (area.left + 20, frametop1, EventList[event->GetValue()].name);
 
-	if (cup->focussed()) col = colDYell;
-	else col = colWhite;
+	col = colWhite;
 	DrawFrameX (area.left, frametop2, framewidth, frameheight, 3, colMBackgr, col, 1.0);
 	if (Events.IsUnlocked (event->GetValue(), cup->GetValue()))
 		FT.SetColor (colDYell);

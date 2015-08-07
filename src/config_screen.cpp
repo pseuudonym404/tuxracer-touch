@@ -126,6 +126,7 @@ void CGameConfig::Mouse (int button, int state, int x, int y) {
 		else if (focussed == textbuttons[1])
 			SetConfig ();
 	}
+	if (focussed) focussed->focus = false;
 }
 
 void CGameConfig::Motion (int x, int y) {
@@ -197,26 +198,14 @@ void CGameConfig::Loop () {
 
 	FT.AutoSizeN (4);
 
-	if (vid_orient->focussed()) FT.SetColor (colDYell);
-	else FT.SetColor (colWhite);
+	FT.SetColor (colWhite);
 	FT.DrawString (area.left, area.top, Trans.Text(86));
-	if (sensit->focussed()) FT.SetColor (colDYell);
-	else FT.SetColor (colWhite);
 	FT.DrawString (area.left, area.top + dd, Trans.Text(94));
-	if (mus_vol->focussed()) FT.SetColor (colDYell);
-	else FT.SetColor (colWhite);
 	FT.DrawString (area.left, area.top + dd * 2, Trans.Text(33));
-	if (sound_vol->focussed()) FT.SetColor (colDYell);
-	else FT.SetColor (colWhite);
 	FT.DrawString (area.left, area.top + dd * 3, Trans.Text(34));
-	if (detail_level->focussed()) FT.SetColor (colDYell);
-	else FT.SetColor (colWhite);
 	FT.DrawString (area.left, area.top + dd * 4, Trans.Text(36));
-	if (language->focussed()) FT.SetColor (colDYell);
-	else FT.SetColor (colWhite);
 	FT.DrawString (area.left, area.top + dd * 5, Trans.Text(35));
 
-	FT.SetColor (colWhite);
 	FT.DrawString (area.left+240, area.top, Trans.Text(87 + vid_orient->GetValue()));
 	FT.DrawString (area.left+240, area.top + dd, Float_StrN(sensit->GetValue() / 10.0f, 1));
 	FT.DrawString (area.left+240, area.top + dd * 2, Int_StrN (mus_vol->GetValue()));

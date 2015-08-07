@@ -202,8 +202,7 @@ void CRaceSelect::Loop() {
 //			0, colMBackgr, colBlack, 0.2);
 
 	// course selection
-	if (course->focussed()) col = colDYell;
-	else col = colWhite;
+	col = colWhite;
 	DrawFrameX (area.left, frametop, framewidth - 100, frameheight, 3, colMBackgr, col, 1.0);
 	FT.AutoSizeN (4);
 	FT.SetColor (colDYell);

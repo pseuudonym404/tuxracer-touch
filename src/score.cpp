@@ -272,9 +272,9 @@ void CScore::Loop () {
 	FT.SetColor (colWhite);
 	FT.DrawString (CENTER, AutoYPosN (Winsys.resolution.width > Winsys.resolution.height ? 6 : 22), Trans.Text(62));
 
-	DrawFrameX (area.left, frametop, framewidth - 93, frameheight, 3, colMBackgr, colDYell, 1.0);
-	FT.AutoSizeN (5);
-	FT.SetColor (colWhite);
+	DrawFrameX (area.left, frametop, framewidth - 93, frameheight, 3, colMBackgr, colWhite, 1.0);
+	FT.AutoSizeN (4);
+	FT.SetColor (colDYell);
 	FT.DrawString (area.left+20, frametop, CourseList[course->GetValue()].name);
 
 	const TScoreList *list = Score.GetScorelist (course->GetValue());

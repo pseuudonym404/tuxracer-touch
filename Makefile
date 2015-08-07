@@ -7,6 +7,7 @@
 # OS_MAC
 
 #ARCHPATH = arm-linux-gnueabihf
+#INSTPATH = /home/laurie/Software/Touch/SDL/install
 #CC = arm-linux-gnueabihf-g++
 
 ARCHPATH = i386-linux-gnu

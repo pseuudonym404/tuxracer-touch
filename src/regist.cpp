@@ -158,8 +158,7 @@ void CRegist::Loop () {
 	FT.DrawString (area.left + 80, AutoYPosN (ptop4), Trans.Text(59));
 
 	FT.AutoSizeN (4);
-	if (player->focussed()) col = colDYell;
-	else col = colWhite;
+	col = colWhite;
 
 	DrawFrameX (area.left + 80, AutoYPosN(ptop2), framewidth, frameheight, 3, colMBackgr, col, 1.0);
 	FT.SetColor (col);
@@ -168,8 +167,7 @@ void CRegist::Loop () {
 		Players.GetPlayerAvatarTexture(player->GetValue())->DrawFrame(
 			area.left - 60, AutoYPosN (ptop), texsize, texsize, 3, colWhite);
 
-	if (character->focussed()) col = colDYell;
-	else col = colWhite;
+	col = colWhite;
 	DrawFrameX (area.left + 80, AutoYPosN(ptop3),
 	            framewidth, frameheight, 3, colMBackgr, col, 1.0);
 	FT.SetColor (col);

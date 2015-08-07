@@ -67,7 +67,7 @@ static int newsound = -1;
 static int lastsound = -1;
 
 void CRacing::Mouse(int button, int state, int x, int y) {
-	if (state == 1) State::manager.RequestEnterState (Paused);
+	if (state == 0) State::manager.RequestEnterState (Paused);
 }
 
 void CRacing::Keyb (unsigned int key, bool special, bool release, int x, int y) {

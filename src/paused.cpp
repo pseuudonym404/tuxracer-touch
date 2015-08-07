@@ -77,10 +77,13 @@ void CPaused::Mouse (int button, int state, int x, int y) {
 	if (state == 0) {
 		if (textbuttons[0]->focussed())
 			State::manager.RequestEnterState(Racing);
-		if (textbuttons[1]->focussed())
+		else if (textbuttons[1]->focussed())
 			State::manager.RequestEnterState(Reset);
-		if (textbuttons[2]->focussed())
+		else if (textbuttons[2]->focussed()) {
+			g_game.raceaborted = true;
+			g_game.race_result = -1;
 			State::manager.RequestEnterState(GameOver);
+		}
 	}
 }
 
