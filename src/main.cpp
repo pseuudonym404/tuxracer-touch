@@ -71,7 +71,7 @@ void InitGame (int argc, char **argv) {
 
 int main( int argc, char **argv ) {
 	//easier gdb attach
-	usleep(2000000);
+	//usleep(2000000);
 	
 	// ****************************************************************
 	cout << "\n----------- Extreme Tux Racer " ETR_VERSION_STRING " ----------------";
