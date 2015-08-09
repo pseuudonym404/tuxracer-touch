@@ -79,7 +79,7 @@ static void draw_time() {
 		*/
 		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
 
-		Tex.Draw (T_TIME, 16, 20, 1);
+		//Tex.Draw (T_TIME, 16, 20, 1);
 		FT.SetColor (colDYell);
 		FT.SetSize (32);
 		FT.DrawString (160, 6, hundrstr);
@@ -100,6 +100,7 @@ static void draw_herring_count (int herring_count) {
 	}
 }
 
+#if 0
 TVector2d calc_new_fan_pt (ETR_DOUBLE angle) {
 	TVector2d pt;
 	pt.x = ENERGY_GAUGE_CENTER_X + cos (ANGLES_TO_RADIANS (angle)) * SPEEDBAR_OUTER_RADIUS;
@@ -297,6 +298,7 @@ void draw_gauge (ETR_DOUBLE speed, ETR_DOUBLE energy) {
 #endif
 	glPopMatrix();
 }
+#endif
 
 void DrawSpeed (ETR_DOUBLE speed) {
 	string speedstr = Int_StrN ((int)speed, 3);

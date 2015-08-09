@@ -162,15 +162,16 @@ void CEnvironment::LoadSkyboxSide(size_t index, const string& EnvDir, const stri
 }
 
 void CEnvironment::LoadSkybox (const string& EnvDir, bool high_res) {
-	Skybox = new TTexture[param.full_skybox ? 6 : 3];
+	Skybox = new TTexture[/*param.full_skybox ? 6 :*/ 3];
 	LoadSkyboxSide(0, EnvDir, "front", high_res);
 	LoadSkyboxSide(1, EnvDir, "left", high_res);
 	LoadSkyboxSide(2, EnvDir, "right", high_res);
-	if (param.full_skybox) {
+	// Can't see these
+	/*if (param.full_skybox) {
 		LoadSkyboxSide(3, EnvDir, "top", high_res);
 		LoadSkyboxSide(4, EnvDir, "bottom", high_res);
 		LoadSkyboxSide(5, EnvDir, "back", high_res);
-	}
+	}*/
 }
 
 void CEnvironment::LoadLight (const string& EnvDir) {

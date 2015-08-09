@@ -59,7 +59,7 @@ void CGameOver::Keyb (unsigned int key, bool special, bool release, int x, int y
 }
 
 void CGameOver::Mouse (int button, int state, int x, int y) {
-	QuitGameOver ();
+	if (state == 0) QuitGameOver ();
 }
 
 

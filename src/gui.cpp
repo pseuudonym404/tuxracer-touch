@@ -560,8 +560,8 @@ void DrawBonusExt (int y, size_t numraces, size_t num) {
 }
 
 void DrawCursor () {
-	Tex.Draw (MOUSECURSOR, cursor_pos.x, cursor_pos.y,
-	          CURSOR_SIZE  * (ETR_DOUBLE)Winsys.resolution.width / 14000);
+	/*Tex.Draw (MOUSECURSOR, cursor_pos.x, cursor_pos.y,
+	          CURSOR_SIZE  * (ETR_DOUBLE)Winsys.resolution.width / 14000);*/
 }
 
 

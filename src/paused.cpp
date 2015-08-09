@@ -96,6 +96,7 @@ void CPaused::Enter () {
 	textbuttons[0] = AddTextButton (Trans.Text(9), CENTER, top, siz);
 	textbuttons[1] = AddTextButton (Trans.Text(91), CENTER, top + dist, siz);
 	textbuttons[2] = AddTextButton (Trans.Text(5), CENTER, top + dist * 2, siz);
+	bw = 60 + max(max(FT.GetTextWidth(Trans.Text(9)), FT.GetTextWidth(Trans.Text(91))), FT.GetTextWidth(Trans.Text(5)));
 }
 // ====================================================================
 
@@ -127,7 +128,7 @@ void CPaused::Loop () {
 
 	int h = FT.AutoDistanceN(2) * 3;
 	int t = (Winsys.resolution.height - h) / 2;
-	DrawFrameX ((Winsys.resolution.width - 180) / 2, t, 180, h, 3, colMBackgr, colWhite, 0.5);
+	DrawFrameX ((Winsys.resolution.width - bw) / 2, t, bw, h, 3, colMBackgr, colWhite, 0.5);
 	DrawGUI();
 
 	Reshape (width, height);

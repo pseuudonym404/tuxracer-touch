@@ -22,6 +22,7 @@ GNU General Public License for more details.
 #include "states.h"
 
 class CPaused : public State {
+	int bw;
 	void Enter();
 	void Loop();
 	void Keyb(unsigned int key, bool special, bool release, int x, int y);
