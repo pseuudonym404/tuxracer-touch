@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tux Racer
+Comment=Penguin sliding
+Exec=tuxracer
+Icon=tuxracer.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+X-Ubuntu-Supported-Orientations=primary

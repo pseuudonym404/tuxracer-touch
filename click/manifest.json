@@ -1,0 +1,15 @@
+{
+    "architecture": [ "armhf", "i386" ],
+    "description": "Penguin sliding",
+    "framework": "ubuntu-sdk-14.10",
+    "hooks": {
+        "tuxracer": {
+            "apparmor": "tuxracer.apparmor",
+            "desktop": "tuxracer.desktop"
+        }
+    },
+    "maintainer": "Laurie Bradshaw <bradshaw.laurie@gmail.com>",
+    "name": "tuxracer.lb",
+    "title": "Tux Racer",
+    "version": "0.7-3"
+}
