@@ -6,16 +6,12 @@
 # OS_WIN32_NATIVE - Windows, for native windows compilers like visual c++
 # OS_MAC
 
-ARCHPATH = arm-linux-gnueabihf
-INSTPATH = /home/laurie/Software/Touch/SDL/install
-CC = arm-linux-gnueabihf-g++
+MULTIARCH ?= arm-linux-gnueabihf
+INSTPATH ?= /home/laurie/touch/armhf/15.04
+CC ?= arm-linux-gnueabihf-g++
 
-#ARCHPATH = i386-linux-gnu
-#INSTPATH = /home/laurie/Software/Touch/SDL/install.i386
-#CC = i686-linux-gnu-g++
-
-CFLAGS = -Wall -Wextra -Wno-unused-parameter -O1 -g -DUSE_GLES1 -fsingle-precision-constant -I/usr/include/freetype2 -I/usr/include/dbus-1.0 -I/usr/lib/$(ARCHPATH)/dbus-1.0/include -I$(INSTPATH)/include -I./src
-LDFLAGS = -L/usr/lib/$(ARCHPATH) -L$(INSTPATH)/lib -lGLESv1_CM -lSDL2 -lSDL2_image -lSDL2_mixer -lfreetype -lm -lstdc++ -ldl -lubuntu_application_api -ldbus-1
+CFLAGS = -Wall -Wextra -Wno-unused-parameter -O1 -g -DUSE_GLES1 -fsingle-precision-constant -I/usr/include/freetype2 -I/usr/include/dbus-1.0 -I/usr/lib/$(MULTIARCH)/dbus-1.0/include -I$(INSTPATH)/include -I./src
+LDFLAGS = -L/usr/lib/$(MULTIARCH) -L$(INSTPATH)/lib -lGLESv1_CM -lSDL2 -lSDL2_image -lSDL2_mixer -lfreetype -lm -lstdc++ -ldl -lubuntu_application_api -ldbus-1
 
 # ----------------- Linux ---------------------------------------------
 #CFLAGS = -Wall -O2 -DOS_LINUX -I/usr/include/freetype2

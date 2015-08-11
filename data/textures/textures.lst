@@ -3,20 +3,12 @@
 # Do not change the id
 # -------------------------------------------------------------
 
-* [id] 0 [name] logo [file] splash_1.png
-
 * [id] 1 [name] snow_start [file] snowstart.png [repeat] 1
 * [id] 2 [name] snow_track [file] snowtrack.png [repeat] 1
 * [id] 3 [name] snow_stop [file] snowstop.png [repeat] 1
-* [id] 4 [name] menu_title [file] menu_title.png [repeat] 0
-* [id] 5 [name] menu_title_small [file] menu_title_small.png [repeat] 0
 
 * [id] 7 [name] herring_icon [file] herringicon.png [repeat] 0
-* [id] 8 [name] gauge_outline [file] gaugeoutline.png [repeat] 0
-* [id] 9 [name] gauge_energy_mask [file] gaugeenergymask.png [repeat] 0
-* [id] 10 [name] gauge_speed_mask [file] gaugespeedmask.png [repeat] 0
 * [id] 11 [name] listbox_arrows [file] listbox_arrows.png [repeat] 0
-* [id] 12 [name] speedmeter [file] speedmeter.png [repeat] 0
 
 * [id] 14 [name] light_butt [file] light_butt.png [repeat] 0
 * [id] 15 [name] snow_butt [file] snow_butt.png [repeat] 0
@@ -26,20 +18,11 @@
 * [id] 19 [name] menu_top_left [file] menu_top_left.png [repeat] 0
 * [id] 20 [name] menu_top_right [file] menu_top_right.png [repeat] 0
 * [id] 21 [name] tuxbonus [file] tuxbonus.png [repeat] 0
-* [id] 22 [name] mouse_cursor [file] mouse_cursor.png [repeat] 0
 * [id] 23 [name] snow_particle [file] snowparticles.png [repeat] 0
-
-* [id] 25 [name] energy_mask [file] energymask2.png [repeat] 0
-* [id] 26 [name] mask_outline [file] mask_outline2.png [repeat] 0
 
 * [id] 27 [name] ziff032 [file] ziff032.png [repeat] 0
 * [id] 28 [name] mirror_butt [file] mirror_butt.png [repeat] 0
 * [id] 30 [name] random_butt [file] random_butt.png [repeat] 0
-
-* [id] 32 [name] time_icon [file] timeicon.png [repeat] 0
-
-
-* [id] 35 [name] speedknob [file] speedknob2.png
 
 * [id] 37 [name] checkbox [file] checkbox.png
 * [id] 38 [name] checkmark_small [file] checkmark_small.png
