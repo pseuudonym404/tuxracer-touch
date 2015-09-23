@@ -7,11 +7,11 @@
 # OS_MAC
 
 MULTIARCH ?= arm-linux-gnueabihf
-INSTPATH ?= /home/laurie/touch/armhf/15.04
+INSTPATH ?= /home/laurie/touch/armhf/15.10
 CC ?= arm-linux-gnueabihf-g++
 
-CFLAGS = -Wall -Wextra -Wno-unused-parameter -O1 -g -DUSE_GLES1 -fsingle-precision-constant -I/usr/include/freetype2 -I/usr/include/dbus-1.0 -I/usr/lib/$(MULTIARCH)/dbus-1.0/include -I$(INSTPATH)/include -I./src
-LDFLAGS = -L/usr/lib/$(MULTIARCH) -L$(INSTPATH)/lib -lGLESv1_CM -lSDL2 -lSDL2_image -lSDL2_mixer -lfreetype -lm -lstdc++ -ldl -lubuntu_application_api -ldbus-1
+CFLAGS = -Wall -Wextra -Wno-unused-parameter -O1 -g -DUSE_GLES1 -fsingle-precision-constant -I/usr/include/freetype2 -I$(INSTPATH)/include -I./src
+LDFLAGS = -L/usr/lib/$(MULTIARCH) -L$(INSTPATH)/lib -Wl,-rpath-link,/lib/$(MULTIARCH),-rpath-link,/usr/lib/$(MULTIARCH),-rpath-link,/usr/lib/$(MULTIARCH)/pulseaudio -lGLESv1_CM -lSDL2 -lSDL2_image -lSDL2_mixer -lfreetype -lm -lstdc++ -ldl -lubuntu_application_api
 
 # ----------------- Linux ---------------------------------------------
 #CFLAGS = -Wall -O2 -DOS_LINUX -I/usr/include/freetype2
